@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfols2.css">
+</head>
+<body>
+    <header style="background-color: #0f511e; padding: 10px; text-align: center;">
+        <h1 style="color: white; margin: 0;">My Portfolio</h1>
+        <button class="nav-btn" onclick="scrollToSection('about')">About</button>
+        <button class="nav-btn" onclick="scrollToSection('projects')">Projects</button>
+        <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
+    </header>
+    <section id="about" class="about-section" style="display: flex; align-items: center; gap: 20px; padding: 30px; justify-content: center; max-width: 600px; margin: auto;">
+        <img src="wegoport.jpg" alt="My Picture" class="profile-pic">
+        <div class="about-text" style="max-width: 400px; text-align: left; font-size: 16px;">
+            <h2 style="color: white; margin-bottom: 10px;">About Me</h2>
+            <p style="color: white;" class="about-text">Welcome to my Portfolio.<br><br> Here you'll get to see all of my achievements, all the work that I've done, and my qualifications.<br>
+                I'm an aspiring programmer who cant wait to create new applications, websites or programs which could help companies automate their difficult tasks.
+                <br>I play the keyboard, love reading, listening to music and taking part in extracurricular activities.<br><br> I believe I have a drive and passion for coding,
+                especially in PYTHON, HTML and JAVA</p>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <button class="project">Project 1</button>
+        <button class="project">Project 2</button>
+        <button class="project">Project 3</button>
+    </section>
+    <section id="contact" style="padding: 10px;">
+        <h2 style="color: white;">Contact Me</h2>
+        <div class="social-links" style="display: flex; justify-content: center; gap: 5px; margin-top: 10px;">
+            <a href="mailto:your.email@example.com" class="social-btn" target="_blank">
+                <img src="email-icon.png" alt="Email" style="width: 30px; height: 30px; border-radius: 5px;">
+            </a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-btn">
+                <img src="linkedin-icon.png" alt="LinkedIn" style="width: 30px; height: 30px; border-radius: 5px;">
+            </a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-btn">
+                <img src="instagram-icon.png" alt="Instagram" style="width: 30px; height: 30px; border-radius: 5px;">
+            </a>
+        </div>
+    </section>
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            const profilePic = document.querySelector(".profile-pic");
+            const aboutSection = document.getElementById("about");
+            const emailButton = document.getElementById("emailButton");
+            if (emailButton) {
+                emailButton.addEventListener("click", function() {
+                    window.open("mailto:your.email@example.com", "_blank");
+                });
+            }
+            function handleScroll() {
+                const rect = aboutSection.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    profilePic.classList.add("visible");
+                }
+            }
+            window.addEventListener("scroll", handleScroll);
+        });
+    </script>
+</body>
+</html>

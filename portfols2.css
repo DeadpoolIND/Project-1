@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #16732b; /* Background color */
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #0f511e; /* Dark green for header */
+    padding: 10px;
+    font-size: 18px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+}
+.nav-btn:hover {
+    background-color: #16732b;
+}
+/* About section adjustments */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Smaller, well-balanced profile picture */
+.profile-pic {
+    width: 180px;
+    height: 320px;
+    border-radius: 0%;
+    border: 2px solid white;
+}
+
+/* Text area more compact */
+.about-text {
+    max-width: 900px;
+    text-align: left;
+    font-size: 19px;
+}
+
+/* Project section adjustments */
+.project {
+    width: 100px;
+    height: 60px;
+    background-color: white;
+    color: #0f511e;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 15   px;
+    margin: 5px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 3px solid white; /* Neon green border */
+    border-radius: 0%;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.social-btn img {
+    width: 60%;
+    height: auto;
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+    border-color: #ffffff;
+}
+
